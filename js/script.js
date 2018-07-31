@@ -1,5 +1,6 @@
-const wrapper = document.querySelector('.wrapper');
+window.addEventListener('load', onLoad);
 
-window.onload = function() {
+function onLoad() {
+    let wrapper = document.querySelector('.wrapper');
     wrapper.classList.add('is-active');
 }
