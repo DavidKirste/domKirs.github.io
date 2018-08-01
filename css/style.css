@@ -55,6 +55,7 @@
 
 .loagan.bw {
     background-image: url('../logan.jpg');
+    background-size: cover;
     background-position: center;
 }
 
