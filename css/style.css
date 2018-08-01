@@ -39,7 +39,7 @@
 }
 
 .box {
-    width: 250px;
+    width: 125px;
     height: 350px;
     margin: 0 auto;
     position: relative;
@@ -86,7 +86,7 @@
 
 .outer-box:hover {
     cursor: pointer;
-    width: 500px;
+    width: 250px;
 }
 
 .outer-box:hover .logan.color {
