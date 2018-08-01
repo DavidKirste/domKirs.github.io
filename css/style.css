@@ -38,25 +38,73 @@
                 opacity .8s 2s;
 }
 
+.box {
+    width: 250px;
+    height: 350px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.outer-box {
+    transform: translate3d(0, 70px, 0);
+    opacity: 0;
+    transition: transform .8s 1.2s,
+                opacity .8s 1.2s,
+                width .4s;
+}
+
+.loagan.bw {
+    background-image: url('logan.jpg');
+    background-position: center;
+}
+
+.logan.color {
+    width: 100%;
+    background-image: url('logan-color.png');
+    background-position: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    transform: scaleX(0);
+    transition: opacity .3s, transform .4s;
+}
+
+.david {
+    color: #FEE934;
+    width: 70px;
+    letter-spacing: -.5px;
+    font-size: 20px;
+    line-height: .9;
+    position: relative;
+    top: 235px;
+    left: calc(50% - 35px);
+    transform: translate3d(0, 70px, 0);
+    transition: opacity .2s .05s cubic-bezier(0,0,.2,1),
+                transform .3s .05s cubic-bezier(0,0,.2,1);
+}
+
+.outer-box:hover {
+    cursor: pointer;
+    width: 500px;
+}
+
+.outer-box:hover .logan.color {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.outer-box:hover .logan.color .david {
+    opacity: 1;
+    transform: none;
+}
+
 .wrapper.is-active .headline,
 .wrapper.is-active .subline,
 .wrapper.is-active .choose-me,
-.wrapper.is-active .logan {
+.wrapper.is-active .outer-box {
     transform: translate3d(0, 0, 0);
     opacity: 1;
-}
-
-.image {
-    width: 100%;
-    text-align: center;
-    overflow: hidden;
-}
-
-.logan {
-    transform: translate3d(0, 120px, 0);
-    opacity: 0;
-    transition: transform 1.3s 1.3s,
-                opacity 1.3s 1.3s;
 }
 
 
