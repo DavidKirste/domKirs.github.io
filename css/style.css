@@ -54,13 +54,13 @@
 }
 
 .loagan.bw {
-    background-image: url('logan.jpg');
+    background-image: url('../logan.jpg');
     background-position: center;
 }
 
 .logan.color {
     width: 100%;
-    background-image: url('logan-color.png');
+    background-image: url('../logan-color.png');
     background-position: center;
     position: absolute;
     top: 0px;
