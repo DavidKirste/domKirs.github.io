@@ -57,6 +57,7 @@
     width: 100%;
     background-image: url('../logan-color.png');
     background-position: center;
+    background-size: cover;
     position: absolute;
     top: 0px;
     left: 0px;
