@@ -32,12 +32,6 @@
                 opacity .8s .7s;
 }
 
-.choose-me {
-    margin-top: 24px;
-    transition: transform .8s 2s,
-                opacity .8s 2s;
-}
-
 .box {
     width: 200px;
     height: 300px;
@@ -85,6 +79,44 @@
                 transform .3s .05s cubic-bezier(0,0,.2,1);
 }
 
+.arrow-div {
+    width: 75px;
+    height: 30px;
+    margin: 10px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translate3d(0, -25px, 0);
+    transition: transform .8s 2s,
+                opacity .8s 2s;
+    animation: pip-animation 2.5s 3s infinite;
+}
+
+.arrow {
+    width: 12px;
+    height: 12px;
+    border: solid black;
+    border-width: 0 5px 5px 0;
+    transform: rotate(-135deg);
+}
+
+@keyframes pip-animation {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(16px);
+    }
+    60% {
+        transform: translateY(8px);
+    }
+}
+
 .outer-box:hover {
     cursor: pointer;
     width: 275px;
@@ -103,7 +135,8 @@
 .wrapper.is-active .headline,
 .wrapper.is-active .subline,
 .wrapper.is-active .choose-me,
-.wrapper.is-active .outer-box {
+.wrapper.is-active .outer-box,
+.wrapper.is-active .arrow-div {
     transform: translate3d(0, 0, 0);
     opacity: 1;
 }
